@@ -50,9 +50,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ImuNoiseModels\ImuNoiseModels.csproj">
+    <ProjectReference Include="..\ImuNoiseModels\SensorNoiseModels.csproj">
       <Project>{646ebe88-6443-49ab-a3f7-840866f9c32a}</Project>
-      <Name>ImuNoiseModels</Name>
+      <Name>SensorNoiseModels</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

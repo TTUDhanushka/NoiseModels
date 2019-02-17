@@ -7,8 +7,8 @@
     <ProjectGuid>{646EBE88-6443-49AB-A3F7-840866F9C32A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ImuNoiseModels</RootNamespace>
-    <AssemblyName>ImuNoiseModels</AssemblyName>
+    <RootNamespace>SensorNoiseModels</RootNamespace>
+    <AssemblyName>SensorNoiseModels</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,8 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NoiseSim.cs" />
+    <Compile Include="GyroSim.cs" />
+    <Compile Include="AccelerometerSim.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
