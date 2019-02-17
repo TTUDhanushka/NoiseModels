@@ -12,9 +12,19 @@ namespace NoiseModels
     {
         private static Thread backGroundThread;
 
+        //const int NO_OF_POINTS = 50;
+        //const int _seed = 0;
+        //static double[] rndArray = new double[NO_OF_POINTS];
+
         static void Main(string[] args)
         {
+            //// Generate few random numbers 
+            //Random randomNum = new Random(_seed);
 
+            //for(int i = 0; i < NO_OF_POINTS; i++)
+            //{
+            //    rndArray[i] = randomNum.NextDouble();
+            //}
 
             backGroundThread = new Thread(DoWork);
 
@@ -23,13 +33,15 @@ namespace NoiseModels
 
         private static void DoWork()
         {
-            GaussianNoise gaussianNoise = new GaussianNoise();
+            AccelerometerSim accNoiseSim = new AccelerometerSim();
+            GyroSim gyroNoiseSim = new GyroSim();
 
+            Random rnd = new Random();
 
 
             while (true)
             {
-                double gauss =  gaussianNoise.GenerateGaussianNoise();
+                double gauss =  accNoiseSim.GenerateGaussianNoise(rnd, 0, 0.5);
             }
         }
     }
