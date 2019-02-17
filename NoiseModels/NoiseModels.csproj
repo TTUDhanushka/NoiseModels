@@ -50,7 +50,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ImuNoiseModels\SensorNoiseModels.csproj">
+    <ProjectReference Include="..\SensorNoiseModels\SensorNoiseModels.csproj">
       <Project>{646ebe88-6443-49ab-a3f7-840866f9c32a}</Project>
       <Name>SensorNoiseModels</Name>
     </ProjectReference>

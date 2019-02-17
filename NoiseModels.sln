@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28010.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoiseModels", "NoiseModels\NoiseModels.csproj", "{CF13FB4A-FFF8-4965-BA76-CA1B43C9B838}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorNoiseModels", "ImuNoiseModels\SensorNoiseModels.csproj", "{646EBE88-6443-49AB-A3F7-840866F9C32A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorNoiseModels", "SensorNoiseModels\SensorNoiseModels.csproj", "{646EBE88-6443-49AB-A3F7-840866F9C32A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

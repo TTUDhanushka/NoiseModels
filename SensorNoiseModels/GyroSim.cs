@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SensorNoiseModels
 {
-    class GyroSim
+    public class GyroSim
     {
         public double GenerateGaussianNoise(Random rand, double mean, double variance)
         {

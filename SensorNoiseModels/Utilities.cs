@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SensorNoiseModels
 {
-    class Utilities
+    public class Utilities
     {
         public double FFT(short dir, int m, double[] x, double[] y)
         {
