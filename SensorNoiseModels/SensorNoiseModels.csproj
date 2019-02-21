@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GnssSim.cs" />
     <Compile Include="GyroSim.cs" />
     <Compile Include="AccelerometerSim.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

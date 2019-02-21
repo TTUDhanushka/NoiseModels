@@ -33,15 +33,21 @@ namespace NoiseModels
 
         private static void DoWork()
         {
-            AccelerometerSim accNoiseSim = new AccelerometerSim();
+            AccelerometerSim accel1 = new AccelerometerSim();
             GyroSim gyroNoiseSim = new GyroSim();
 
             Random rnd = new Random();
 
+            accel1.NoOfAxes = AccelerometerSim.Axes.TriAxes;
+            accel1.X_Enable = true;
+
+            gyroNoiseSim.NoOfAxes = GyroSim.Axes.Single;
 
             while (true)
             {
-                double gauss =  accNoiseSim.GenerateGaussianNoise(rnd, 0, 0.5);
+                //double gauss =  accNoiseSim.AddGaussianNoise(rnd, 0, 0.5);
+
+                double accNoise = accel1.GenerateNoisyOutput(rnd, 0, 0.5);
             }
         }
     }

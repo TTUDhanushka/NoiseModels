@@ -8,6 +8,34 @@ namespace SensorNoiseModels
 {
     public class GyroSim
     {
+        public enum Axes
+        {
+            Single,
+            Tri
+        }
+
+        public enum SensorOutput
+        {
+            Disabled,
+            Enabled
+        }
+
+        public double Resolution { get; set; }
+
+        public double Range { get; set; }
+
+        public double StdDev { get; set; }
+
+        public double Mean { get; set; }
+
+        public Axes NoOfAxes { get; set; }
+
+        public SensorOutput X { get; set; }
+
+        public SensorOutput Y { get; set; }
+
+        public SensorOutput Z { get; set; }
+
         public double GenerateGaussianNoise(Random rand, double mean, double variance)
         {
             //Random rnd = new Random(1);

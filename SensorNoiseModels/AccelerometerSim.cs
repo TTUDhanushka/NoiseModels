@@ -9,8 +9,39 @@ namespace SensorNoiseModels
     public class AccelerometerSim
     {
         const int Seconds = 60;
+        const double g = 9.80665;       // ms-2
 
-        public double GenerateGaussianNoise(Random rand, double mean, double variance)
+        public enum Axes
+        {
+            Single,
+            TriAxes
+        }
+
+        public enum SensorOutput
+        {
+            Disabled,
+            Enabled
+        }
+
+        public double Resolution { get; set; }
+
+        public double Range { get; set; }
+
+        public double StdDev { get; set; }
+
+        public double Mean { get; set; }
+
+        public Axes NoOfAxes { get; set; }
+
+        public bool X_Enable { get; set; }
+
+        public bool Y_Enable { get; set; }
+
+        public bool Z_Enable { get; set; }
+
+        public SensorOutput GaussianNoise { get; set; }
+
+        public double AddGaussianNoise(Random rand, double mean, double variance)
         {
             //Random rnd = new Random(1);
 
@@ -22,7 +53,7 @@ namespace SensorNoiseModels
             return y1;
         }
 
-        public double GetEngineNoise(double rpm)
+        public double AddEngineNoise(double rpm)
         {
             double frequency = rpm / Seconds;
 
@@ -30,8 +61,25 @@ namespace SensorNoiseModels
             return frequency;
         }
 
+        public double AddGravityEffect()
+        {
+            double x = 0.0;
 
+            return x;
+        }
+
+        public double GenerateNoisyOutput(Random r, double stDev, double mean)
+        {
+            double noiseOut = 0.0;
+
+            //Random r = new Random();
+
+            if (GaussianNoise == SensorOutput.Enabled)
+                noiseOut += AddGaussianNoise(r, mean, stDev);
+
+
+            return noiseOut;
+        }
 
     }
-
 }
