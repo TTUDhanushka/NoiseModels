@@ -43,11 +43,15 @@ namespace NoiseModels
 
             gyroNoiseSim.NoOfAxes = GyroSim.Axes.Single;
 
+            accel1.GaussianNoise = AccelerometerSim.SensorOutput.Enabled;
+
             while (true)
             {
                 //double gauss =  accNoiseSim.AddGaussianNoise(rnd, 0, 0.5);
 
                 double accNoise = accel1.GenerateNoisyOutput(rnd, 0, 0.5);
+
+                Console.WriteLine("Noisy out: {0}", accNoise.ToString("F2"));
             }
         }
     }

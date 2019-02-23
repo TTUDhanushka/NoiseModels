@@ -45,12 +45,23 @@ namespace SensorNoiseModels
         {
             //Random rnd = new Random(1);
 
-            double x1 = 1 - rand.NextDouble();
-            double x2 = 1 - rand.NextDouble();
+            double x1 = rand.NextDouble() * (1.0);
+            double x2 = rand.NextDouble() * (1.0);
 
-            double y1 = Math.Sqrt(-2.0 * Math.Log(x1) * Math.Cos(2.0 * Math.PI * x2));
+            //double y1 = Math.Sqrt(-2.0 * Math.Log(x1) * Math.Cos(2.0 * Math.PI * x2));
 
-            return y1;
+
+            double t = Math.Log(x1);
+
+            // Box - Muller method
+            double r = Math.Sqrt(-2.0 * Math.Log(x1));
+            double theta = 2.0 * Math.PI * x2;
+
+            double cos = Math.Cos(theta);
+
+            double x = r * Math.Cos(theta);
+
+            return x;
         }
 
         public double AddEngineNoise(double rpm)
