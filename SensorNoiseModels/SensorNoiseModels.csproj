@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{646EBE88-6443-49AB-A3F7-840866F9C32A}</ProjectGuid>
+    <ProjectGuid>{288B2BDB-46CF-4C92-9CEF-EE2EA5868991}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SensorNoiseModels</RootNamespace>

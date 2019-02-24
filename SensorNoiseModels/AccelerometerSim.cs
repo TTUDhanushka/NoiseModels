@@ -41,6 +41,20 @@ namespace SensorNoiseModels
 
         public SensorOutput GaussianNoise { get; set; }
 
+        public void Initialize()
+        {
+            double ? Resolution = null;
+
+            if ((null == Resolution) || (Resolution.GetValueOrDefault() == 0))
+            {
+                // Default resolution for INS-D inertial labs sensor
+                Resolution = 1e-6;
+            }
+
+
+                double x = Range;
+        }
+
         public double AddGaussianNoise(Random rand, double mean, double variance)
         {
             //Random rnd = new Random(1);

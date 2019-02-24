@@ -39,11 +39,14 @@ namespace NoiseModels
             Random rnd = new Random();
 
             accel1.NoOfAxes = AccelerometerSim.Axes.TriAxes;
+
             accel1.X_Enable = true;
 
             gyroNoiseSim.NoOfAxes = GyroSim.Axes.Single;
 
             accel1.GaussianNoise = AccelerometerSim.SensorOutput.Enabled;
+
+            accel1.Initialize();
 
             while (true)
             {
